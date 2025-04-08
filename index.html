@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的项目主页</title>
+    <title>我的项目学习记录主页</title>
     <style>
-        body {
+        body
+        {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
         }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        
+        @keyframes gradientBG
+        {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container
+        {
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
+            border-radius: 8px;
         }
-        .project-card {
+        
+        .project-card
+        {
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -28,29 +44,38 @@
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        .project-card:hover {
+        
+        .project-card:hover
+        {
             transform: scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .project-card h2 {
+        
+        .project-card h2
+        {
             margin-top: 0;
         }
-        .project-card p {
+        
+        .project-card p
+        {
             color: #666;
         }
-        .project-card a {
+        
+        .project-card a
+        {
             text-decoration: none;
             color: #007BFF;
         }
     </style>
 </head>
+
 <body>
     <h1 style="text-align: center;">我的项目主页</h1>
     <div class="container">
         <div class="project-card">
             <h2>项目一</h2>
             <p>项目简介...</p>
-            <a href="项目链接">查看项目</a>
+            <a href="https://www.bilibili.com/">查看项目</a>
         </div>
         <div class="project-card">
             <h2>项目二</h2>
