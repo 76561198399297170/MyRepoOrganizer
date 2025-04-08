@@ -1,128 +1,142 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我的项目主页</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0; /*浅灰色背景*/
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap; /*允许换行*/
-    justify-content: center; /*水平居中*/
-    padding: 20px;
-}
-
-.project-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    padding: 20px;
-    width: 300px; /*卡片宽度*/
-    min-height: 200px; /*确保卡片高度足够*/
-    position: relative; /*为了定位工具提示*/
-}
-
-.project-title {
-    color: #333; /*深灰色标题颜色*/
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.project-description {
-    color: #555; /*深灰色描述颜色*/
-    margin-bottom: 10px;
-}
-
-.project-link {
-    display: block; /*使链接占据整行*/
-    text-decoration: none;
-    color: #007bff; /*蓝色链接颜色*/
-    transition: color 0.3s; /*链接颜色过渡效果*/
-}
-
-.project-link:hover {
-    color: #0056b3; /*深蓝色链接颜色*/
-}
-
-
-.tooltip {
-    position: absolute;
-    background-color: #333; /*深灰色工具提示背景*/
-    color: #fff;
-    padding: 10px;
-    border-radius: 4px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none; /*防止工具提示干扰鼠标事件*/
-    z-index: 10; /*确保工具提示在卡片之上*/
-}
-
-.project-card:hover .tooltip {
-    opacity: 1;
-}
-
-.project-card:hover .project-link{
-    text-decoration: underline;
-}
-
-
-/* 鼠标悬停矩形框 */
-.project-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1); /*半透明黑色背景*/
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 5;
-}
-
-.project-card:hover::before {
-    opacity: 1;
-}
-
-h1{
-    color: #552255; /*偏紫色的大标题*/
-    text-align: center;
-    margin-bottom: 30px;
-}
-</style>
-</head>
-<body>
-<h1>我的项目</h1>
-<div class="container">
-    <div class="project-card">
-        <div class="project-title">项目一</div>
-        <div class="project-description">项目一简介...</div>
-        <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
-        <div class="tooltip">这是一个更详细的项目一简介</div>
-    </div>
-    <div class="project-card">
-        <div class="project-title">项目二</div>
-        <div class="project-description">项目二简介...</div>
-        <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
-        <div class="tooltip">这是一个更详细的项目二简介</div>
-    </div>
-    <div class="project-card">
-        <div class="project-title">项目三</div>
-        <div class="project-description">项目三简介...</div>
-        <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
-        <div class="tooltip">这是一个更详细的项目三简介</div>
-    </div>
-    <!-- 添加更多项目卡片 -->
-</div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>我的学习记录备份</title>
+        
+        <style>
+            body
+            {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0; /*浅灰色背景*/
+            }
+            
+            .container
+            {
+                display: flex;
+                flex-wrap: wrap; /*允许换行*/
+                justify-content: center; /*水平居中*/
+                padding: 20px;
+            }
+            
+            .project-card
+            {
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin: 20px;
+                padding: 20px;
+                width: 300px; /*卡片宽度*/
+                min-height: 200px; /*确保卡片高度足够*/
+                position: relative; /*为了定位工具提示*/
+            }
+            
+            .project-title
+            {
+                color: #333; /*深灰色标题颜色*/
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            
+            .project-description
+            {
+                color: #555; /*深灰色描述颜色*/
+                margin-bottom: 10px;
+            }
+            
+            .project-link
+            {
+                display: block; /*使链接占据整行*/
+                text-decoration: none;
+                color: #007bff; /*蓝色链接颜色*/
+                transition: color 0.3s; /*链接颜色过渡效果*/
+            }
+            
+            .project-link:hover
+            {
+                color: #0056b3; /*深蓝色链接颜色*/
+            }
+        
+            .tooltip
+            {
+                position: absolute;
+                background-color: #333; /*深灰色工具提示背景*/
+                color: #fff;
+                padding: 10px;
+                border-radius: 4px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                pointer-events: none; /*防止工具提示干扰鼠标事件*/
+                z-index: 10; /*确保工具提示在卡片之上*/
+            }
+            
+            .project-card:hover .tooltip
+            {
+                opacity: 1;
+            }
+            
+            .project-card:hover .project-link
+            {
+                text-decoration: underline;
+            }
+            
+            
+            /* 鼠标悬停矩形框 */
+            .project-card::before
+            {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.1); /*半透明黑色背景*/
+                border-radius: 8px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                z-index: 5;
+            }
+            
+            .project-card:hover::before
+            {
+                opacity: 1;
+            }
+            
+            h1
+            {
+                color: #552255; /*偏紫色的大标题*/
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <h1>我的项目</h1>
+        <div class="container">
+            <div class="project-card">
+                <div class="project-title">项目一</div>
+                <div class="project-description">项目一简介...</div>
+                <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
+                <div class="tooltip">这是一个更详细的项目一简介</div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">项目二</div>
+                <div class="project-description">项目二简介...</div>
+                <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
+                <div class="tooltip">这是一个更详细的项目二简介</div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">项目三</div>
+                <div class="project-description">项目三简介...</div>
+                <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
+                <div class="tooltip">这是一个更详细的项目三简介</div>
+            </div>
+            <!-- 添加更多项目卡片 -->
+        </div>
+    </body>
 </html>
