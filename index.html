@@ -142,8 +142,8 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                pointer-events: none; /* 确保canvas不会阻止鼠标事件 */
-                z-index: 0; /* 确保canvas在container之下 */
+                pointer-events: none;
+                z-index: 0;
             }
 
         </style>
@@ -152,9 +152,9 @@
         <h1>我的学习记录备份</h1>
         <div class="container">
             <div class="project-card">
-                <div class="project-title">项目一</div>
-                <div class="project-description" data-tooltip="这是一个更详细的项目一简介">项目一简介...</div>
-                <a href="https://www.bilibili.com/" class="project-link" data-tooltip="https://www.bilibili.com/">查看项目</a>
+                <div class="project-title">MFC打字窗口</div>
+                <div class="project-description" data-tooltip="项目模仿网页打字小程序从底层编写的打字框窗口，有计时器与输入字符情况统计，第一次写所以数据结构写的不是很好...">两星期从零开始学习尝试编写完成</div>
+                <a href="https://github.com/76561198399297170/TypingFrame" class="project-link" data-tooltip="https://github.com/76561198399297170/TypingFrame">查看项目</a>
             </div>
             <div class="project-card">
                 <div class="project-title">项目二</div>
@@ -178,10 +178,10 @@
             {
                 this.x = x;
                 this.y = y;
-                this.size = isStar ? (Math.random() * 30 + 2) : (Math.random() * 5 + 1); // 星星更大
-                this.speedX = (Math.random() - 0.5) * (isStar ? 7 : 2); // 星星速度更快
-                this.speedY = (Math.random() - 0.5) * (isStar ? 7 : 2); // 星星速度更快
-                this.gravity = isStar ? 0.1 : 0; // 只有星星受重力
+                this.size = isStar ? (Math.random() * 30 + 2) : (Math.random() * 5 + 1);
+                this.speedX = (Math.random() - 0.5) * (isStar ? 7 : 2);
+                this.speedY = (Math.random() - 0.5) * (isStar ? 7 : 2);
+                this.gravity = isStar ? 0.1 : 0;
                 this.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
                 this.alpha = 1;
                 this.isStar = isStar;
@@ -207,24 +207,29 @@
                 ctx.globalAlpha = this.alpha;
                 ctx.fillStyle = this.color;
                 ctx.beginPath();
-                if (this.isStar) {
-                    // 绘制星形
-                    const spikes = 5; // 星形的尖角数
+                if (this.isStar)
+                {
+                    const spikes = 5;
                     const outerRadius = this.size;
                     const innerRadius = this.size / 2;
                     const angle = Math.PI / spikes;
-                    for (let i = 0; i < spikes * 2; i++) {
+                    for (let i = 0; i < spikes * 2; i++)
+                        {
                         const x = this.x + Math.cos(i * angle) * (i % 2 === 0 ? outerRadius : innerRadius);
                         const y = this.y + Math.sin(i * angle) * (i % 2 === 0 ? outerRadius : innerRadius);
-                        if (i === 0) {
+                        if (i === 0)
+                        {
                             ctx.moveTo(x, y);
-                        } else {
+                        }
+                        else
+                        {
                             ctx.lineTo(x, y);
                         }
                     }
                     ctx.closePath();
-                } else {
-                    // 绘制圆形
+                }
+                else
+                {
                     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 }
                 ctx.fill();
@@ -248,21 +253,20 @@
                     particles.push(new Particle(x, y));
                 }
             });
-
-
+            
             function resizeCanvas()
             {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
             }
             window.addEventListener('resize', resizeCanvas);
-            resizeCanvas(); // 初始调用以设置canvas大小
-
-
+            resizeCanvas();
+            
             function animate()
             {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                for (let i = particles.length - 1; i >= 0; i--) {
+                for (let i = particles.length - 1; i >= 0; i--)
+                {
                     const particle = particles[i];
                     particle.update();
                     if (particle.alpha > 0)
@@ -276,7 +280,6 @@
                 }
                 requestAnimationFrame(animate);
             }
-
             animate();
         </script>
     </body>
