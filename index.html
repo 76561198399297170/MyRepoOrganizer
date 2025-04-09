@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>我的学习记录备份</title>
-        
+        <title>备份存档</title>
         <style>
             body
             {
+                user-select: none;
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
@@ -25,132 +25,259 @@
                 50% { background-position: 100% 50%; }
                 100% { background-position: 0% 50%; }
             }
-            
+
             .container
             {
-                background: rgba(0, 0, 0, 0.7);
+                background: rgba(0, 0, 0, 0.75);
                 padding: 20px;
+                width: 90%;
+                margin: 10px auto;
                 border-radius: 8px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
+
             .project-card
             {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
                 background-color: #fff;
                 border-radius: 8px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 margin: 20px;
                 padding: 20px;
-                width: 300px; /*卡片宽度*/
-                min-height: 200px; /*确保卡片高度足够*/
-                position: relative; /*为了定位工具提示*/
+                width: 80%;
+                height: 125px;
             }
-            
+
             .project-title
             {
-                color: #333; /*深灰色标题颜色*/
                 font-size: 24px;
                 font-weight: bold;
-                margin-bottom: 10px;
+                text-align: center;
+                margin-bottom: 2px;
+                color: #000;
+            }
+
+            .project-link
+            {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 25px;
+                color: #000;
             }
             
             .project-description
             {
-                color: #555; /*深灰色描述颜色*/
-                margin-bottom: 10px;
+                text-align: center;
+                width: 100%;
+                margin-bottom: 30px;
+                color: #000;
             }
-            
-            .project-link
+
+            .project-description::after
             {
-                display: block; /*使链接占据整行*/
-                text-decoration: none;
-                color: #007bff; /*蓝色链接颜色*/
-                transition: color 0.3s; /*链接颜色过渡效果*/
-            }
-            
-            .project-link:hover
-            {
-                color: #0056b3; /*深蓝色链接颜色*/
-            }
-        
-            .tooltip
-            {
+                content: attr(data-tooltip);
                 position: absolute;
-                background-color: #333; /*深灰色工具提示背景*/
+                background-color: rgba(0, 0, 0, 0.75);
                 color: #fff;
                 padding: 10px;
                 border-radius: 4px;
                 opacity: 0;
                 transition: opacity 0.3s;
-                pointer-events: none; /*防止工具提示干扰鼠标事件*/
-                z-index: 10; /*确保工具提示在卡片之上*/
+                pointer-events: none;
+                z-index: 10;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
             }
-            
-            .project-card:hover .tooltip
+
+            .project-description:hover::after
             {
                 opacity: 1;
             }
             
-            .project-card:hover .project-link
+            .project-link::after
             {
-                text-decoration: underline;
-            }
-            
-            
-            /* 鼠标悬停矩形框 */
-            .project-card::before
-            {
-                content: "";
+                content: attr(data-tooltip);
                 position: absolute;
+                background-color: rgba(0, 0, 0, 0.75);
+                color: #fff;
+                padding: 10px;
+                border-radius: 4px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                pointer-events: none;
+                z-index: 10;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+
+            .project-link:hover
+            {
+                color: #0056b3;
+            }
+
+            .project-link:hover::after
+            {
+                opacity: 1;
+            }
+
+            h1
+            {
+                color: #552255;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            #particleCanvas
+            {
+                position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.1); /*半透明黑色背景*/
-                border-radius: 8px;
-                opacity: 0;
-                transition: opacity 0.3s;
-                z-index: 5;
+                pointer-events: none; /* 确保canvas不会阻止鼠标事件 */
+                z-index: 0; /* 确保canvas在container之下 */
             }
-            
-            .project-card:hover::before
-            {
-                opacity: 1;
-            }
-            
-            h1
-            {
-                color: #552255; /*偏紫色的大标题*/
-                text-align: center;
-                margin-bottom: 30px;
-            }
+
         </style>
     </head>
-        
     <body>
-        <h1>我的项目</h1>
+        <h1>我的学习记录备份</h1>
         <div class="container">
             <div class="project-card">
                 <div class="project-title">项目一</div>
-                <div class="project-description">项目一简介...</div>
-                <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
-                <div class="tooltip">这是一个更详细的项目一简介</div>
+                <div class="project-description" data-tooltip="这是一个更详细的项目一简介">项目一简介...</div>
+                <a href="https://www.bilibili.com/" class="project-link" data-tooltip="https://www.bilibili.com/">查看项目</a>
             </div>
             <div class="project-card">
                 <div class="project-title">项目二</div>
-                <div class="project-description">项目二简介...</div>
-                <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
-                <div class="tooltip">这是一个更详细的项目二简介</div>
-            </div>
-            <div class="project-card">
-                <div class="project-title">项目三</div>
-                <div class="project-description">项目三简介...</div>
-                <a href="https://www.bilibili.com/" class="project-link">查看项目</a>
-                <div class="tooltip">这是一个更详细的项目三简介</div>
+                <div class="project-description" data-tooltip="这是一个更详细的项目一简介">项目二简介...</div>
+                <a href="https://www.bilibili.com/" class="project-link" data-tooltip="https://www.bilibili.com/">查看项目</a>
             </div>
             <!-- 添加更多项目卡片 -->
         </div>
+
+        <canvas id="particleCanvas"></canvas>
+        <script>
+            const canvas = document.getElementById('particleCanvas');
+            const ctx = canvas.getContext('2d');
+            const container = document.querySelector('.container');
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            let particles = [];
+
+            function Particle(x, y, isStar)
+            {
+                this.x = x;
+                this.y = y;
+                this.size = isStar ? (Math.random() * 30 + 2) : (Math.random() * 5 + 1); // 星星更大
+                this.speedX = (Math.random() - 0.5) * (isStar ? 7 : 2); // 星星速度更快
+                this.speedY = (Math.random() - 0.5) * (isStar ? 7 : 2); // 星星速度更快
+                this.gravity = isStar ? 0.1 : 0; // 只有星星受重力
+                this.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+                this.alpha = 1;
+                this.isStar = isStar;
+            }
+
+            Particle.prototype.update = function()
+            {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.speedY += this.gravity;
+                this.alpha -= 0.02;
+                if (this.alpha <= 0)
+                {
+                    const index = particles.indexOf(this);
+                    if (index !== -1) {
+                        particles.splice(index, 1);
+                    }
+                }
+            };
+
+            Particle.prototype.draw = function()
+            {
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                if (this.isStar) {
+                    // 绘制星形
+                    const spikes = 5; // 星形的尖角数
+                    const outerRadius = this.size;
+                    const innerRadius = this.size / 2;
+                    const angle = Math.PI / spikes;
+                    for (let i = 0; i < spikes * 2; i++) {
+                        const x = this.x + Math.cos(i * angle) * (i % 2 === 0 ? outerRadius : innerRadius);
+                        const y = this.y + Math.sin(i * angle) * (i % 2 === 0 ? outerRadius : innerRadius);
+                        if (i === 0) {
+                            ctx.moveTo(x, y);
+                        } else {
+                            ctx.lineTo(x, y);
+                        }
+                    }
+                    ctx.closePath();
+                } else {
+                    // 绘制圆形
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                }
+                ctx.fill();
+            };
+
+            document.addEventListener('click', (e) =>
+            {
+                for (let i = 0; i < 10; i++)
+                {
+                    particles.push(new Particle(e.clientX, e.clientY, true)); // isStar 为 true
+                }
+            });
+
+            document.addEventListener('mousemove', (e) =>
+            {
+                const x = e.clientX;
+                const y = e.clientY;
+
+                for (let i = 0; i < 5; i++)
+                {
+                    particles.push(new Particle(x, y));
+                }
+            });
+
+
+            function resizeCanvas()
+            {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas(); // 初始调用以设置canvas大小
+
+
+            function animate()
+            {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const particle = particles[i];
+                    particle.update();
+                    if (particle.alpha > 0)
+                    {
+                        particle.draw();
+                    }
+                    else
+                    {
+                        particles.splice(i, 1);
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        </script>
     </body>
 </html>
