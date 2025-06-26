@@ -1,34 +1,37 @@
-/* 基础样式 */
-body {
+body
+{
     font-family: 'Inter', sans-serif;
-    background-color: #FFF6CC; /* 使用奶白色作为背景色 */
-    color: #333; /* 调整文本颜色以提高可读性 */
+    background-color: #99ddcc;
+    color: #333;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-a {
-    color: #FFA500; /* 调整链接颜色 */
+a
+{
+    color: #f6f6f6;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #FF8C00; /* 悬停时链接颜色 */
+a:hover
+{
+    color: #ffe2e2;
 }
 
-.container {
+.container
+{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* 侧边导航栏样式 */
-.sidebar {
+.sidebar
+{
     width: 250px;
     height: 100vh;
-    background-color: rgba(255, 246, 204, 0.8); /* 使用奶白色并设置透明度 */
+    background-color: rgba(153, 221, 204, 0.8);
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 20;
@@ -38,56 +41,63 @@ a:hover {
     top: 0;
 }
 
-.sidebar-content {
+.sidebar-content
+{
     padding: 20px;
 }
 
-.sidebar ul {
+.sidebar ul
+{
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.sidebar ul li {
+.sidebar ul li
+{
     margin-bottom: 20px;
 }
 
-.sidebar ul li a {
+.sidebar ul li a
+{
     font-weight: 500;
 }
 
-/* 主内容区域样式 */
-.main-content {
+.main-content
+{
     flex: 1;
     padding: 80px 40px 40px 290px;
 }
 
-/* 英雄区域样式 */
-.hero {
+.hero
+{
     position: relative;
     padding: 80px 0;
     overflow: hidden;
 }
 
-.hero::before {
+.hero::before
+{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #FFF6CC, #FFEBC2); /* 使用奶白色渐变 */
+    background: linear-gradient(to bottom, #99ddcc, #bad7df);
     opacity: 0.7;
     z-index: -1;
 }
 
-.hero-content {
+.hero-content
+{
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-.hero h2 {
+.hero h2
+{
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 300;
     margin-bottom: 30px;
@@ -95,33 +105,37 @@ a:hover {
     animation: float 6s ease-in-out infinite;
 }
 
-.hero h2 span {
+.hero h2 span
+{
     font-weight: 600;
 }
 
-.hero p {
+.hero p
+{
     font-size: clamp(1rem, 2vw, 1.25rem);
-    color: rgba(51, 51, 51, 0.8); /* 调整段落文本颜色 */
+    color: rgba(51, 51, 51, 0.8);
     margin-bottom: 50px;
 }
 
-.hero .cta-button {
+.hero .cta-button
+{
     display: inline-block;
-    background-color: #FFA500; /* 按钮背景色 */
-    color: #FFF6CC; /* 按钮文本颜色 */
+    background-color: #f6f6f6;
+    color: #99ddcc;
     padding: 12px 30px;
     border-radius: 50px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.hero .cta-button:hover {
-    background-color: #FF8C00; /* 悬停时按钮背景色 */
+.hero .cta-button:hover
+{
+    background-color: #ffe2e2;
     transform: scale(1.05);
 }
 
-/* 粒子效果画布 */
-#particleCanvas {
+#particleCanvas
+{
     position: fixed;
     top: 0;
     left: 0;
@@ -132,17 +146,18 @@ a:hover {
     opacity: 0.3;
 }
 
-/* 动画效果 */
-@keyframes float {
-    0% {
+@keyframes float
+{
+    0%
+    {
         transform: translateY(0px);
     }
-
-    50% {
+    50%
+    {
         transform: translateY(-15px);
     }
-
-    100% {
+    100%
+    {
         transform: translateY(0px);
     }
 }
