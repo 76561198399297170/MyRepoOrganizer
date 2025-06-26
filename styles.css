@@ -20,6 +20,17 @@ a:hover
     color: #ffe2e2;
 }
 
+a.resource-link
+{
+    color: #303841;
+    text-decoration: underline;
+}
+
+a.resource-link:hover
+{
+    color: #e84a5f;
+}
+
 .container
 {
     max-width: 1200px;
