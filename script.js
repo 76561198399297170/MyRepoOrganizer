@@ -91,7 +91,6 @@ function animate() {
 }
 animate();
 
-// 确保粒子画布在侧边栏之上
 const sidebar = document.querySelector('.sidebar');
 sidebar.style.zIndex = 20;
 canvas.style.zIndex = 999;
