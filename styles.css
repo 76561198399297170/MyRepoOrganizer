@@ -1,21 +1,21 @@
 /* 基础样式 */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0a192f;
-    color: #ccd6f6;
+    background-color: #FFF6CC; /* 使用奶白色作为背景色 */
+    color: #333; /* 调整文本颜色以提高可读性 */
     margin: 0;
     padding: 0;
     display: flex;
 }
 
 a {
-    color: #64ffda;
+    color: #FFA500; /* 调整链接颜色 */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ccd6f6;
+    color: #FF8C00; /* 悬停时链接颜色 */
 }
 
 .container {
@@ -28,7 +28,7 @@ a:hover {
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: rgba(10, 25, 47, 0.8);
+    background-color: rgba(255, 246, 204, 0.8); /* 使用奶白色并设置透明度 */
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 20;
@@ -76,7 +76,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, #0a192f, #112240);
+    background: linear-gradient(to bottom, #FFF6CC, #FFEBC2); /* 使用奶白色渐变 */
     opacity: 0.7;
     z-index: -1;
 }
@@ -101,14 +101,14 @@ a:hover {
 
 .hero p {
     font-size: clamp(1rem, 2vw, 1.25rem);
-    color: rgba(204, 214, 246, 0.8);
+    color: rgba(51, 51, 51, 0.8); /* 调整段落文本颜色 */
     margin-bottom: 50px;
 }
 
 .hero .cta-button {
     display: inline-block;
-    background-color: rgba(100, 255, 218, 0.9);
-    color: #0a192f;
+    background-color: #FFA500; /* 按钮背景色 */
+    color: #FFF6CC; /* 按钮文本颜色 */
     padding: 12px 30px;
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -116,7 +116,7 @@ a:hover {
 }
 
 .hero .cta-button:hover {
-    background-color: #64ffda;
+    background-color: #FF8C00; /* 悬停时按钮背景色 */
     transform: scale(1.05);
 }
 
