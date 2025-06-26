@@ -1,7 +1,7 @@
 body
 {
     font-family: 'Inter', sans-serif;
-    background-color: #99ddcc;
+    background-color: #f6f6f6;
     color: #333;
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ a:hover
 {
     width: 250px;
     height: 100vh;
-    background-color: rgba(153, 221, 204, 0.8);
+    background-color: #303841;
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 20;
@@ -120,7 +120,7 @@ a:hover
 .hero .cta-button
 {
     display: inline-block;
-    background-color: #f6f6f6;
+    background-color: #303841;
     color: #99ddcc;
     padding: 12px 30px;
     border-radius: 50px;
