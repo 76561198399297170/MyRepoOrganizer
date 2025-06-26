@@ -1,296 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>3629115067</title>
-        <style>
-            body
-            {
-                user-select: none;
-                font-family: Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-                background-size: 400% 400%;
-                animation: gradientBG 15s ease infinite;
-                color: #fff;
-                text-align: center;
-                padding: 50px;
-            }
 
-            @keyframes gradientBG
-            {
-                0% { background-position: 0% 50%; }
-                50% { background-position: 100% 50%; }
-                100% { background-position: 0% 50%; }
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>项目集合</title>
+</head>
 
-            .container
-            {
-                background: rgba(0, 0, 0, 0.75);
-                padding: 20px;
-                width: 90%;
-                margin: 10px auto;
-                border-radius: 8px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .project-card
-            {
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-                background-color: #fff;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                margin: 20px;
-                padding: 20px;
-                width: 80%;
-                height: 125px;
-            }
-
-            .project-title
-            {
-                font-size: 24px;
-                font-weight: bold;
-                text-align: center;
-                margin-bottom: 2px;
-                color: #000;
-            }
-
-            .project-link
-            {
-                text-align: center;
-                width: 100%;
-                margin-bottom: 25px;
-                color: #000;
-            }
-            
-            .project-description
-            {
-                text-align: center;
-                width: 100%;
-                margin-bottom: 30px;
-                color: #000;
-            }
-
-            .project-description::after
-            {
-                content: attr(data-tooltip);
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.75);
-                color: #fff;
-                padding: 10px;
-                border-radius: 4px;
-                opacity: 0;
-                transition: opacity 0.3s;
-                pointer-events: none;
-                z-index: 10;
-                left: 50%;
-                transform: translateX(-50%);
-                white-space: nowrap;
-            }
-
-            .project-description:hover::after
-            {
-                opacity: 1;
-            }
-            
-            .project-link::after
-            {
-                content: attr(data-tooltip);
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.75);
-                color: #fff;
-                padding: 10px;
-                border-radius: 4px;
-                opacity: 0;
-                transition: opacity 0.3s;
-                pointer-events: none;
-                z-index: 10;
-                left: 50%;
-                transform: translateX(-50%);
-                white-space: nowrap;
-            }
-
-            .project-link:hover
-            {
-                color: #0056b3;
-            }
-
-            .project-link:hover::after
-            {
-                opacity: 1;
-            }
-
-            h1
-            {
-                color: #552255;
-                text-align: center;
-                margin-bottom: 30px;
-            }
-
-            #particleCanvas
-            {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                z-index: 0;
-            }
-
-        </style>
-    </head>
-    <body>
-        <h1>我的自学项目备份</h1>
-        <div class="container">
-            <div class="project-card">
-                <div class="project-title">MFC打字窗口</div>
-                <div class="project-description" data-tooltip="项目模仿网页打字小程序从底层编写的打字框窗口，有计时器与输入字符情况统计，第一次写所以数据结构写的不是很好...">两星期从零开始学习尝试编写完成</div>
-                <a href="https://github.com/76561198399297170/TypingFrame" class="project-link" data-tooltip="https://github.com/76561198399297170/TypingFrame">查看项目</a>
+<body>
+    <div id="navbar-placeholder"></div>
+    <main class="main-content">
+        <div class="hero">
+            <div class="hero-content">
+                <h2>欢迎来到 <span>项目集合</span></h2>
+                <p>这里汇聚了我的各类项目，希望你能喜欢！</p>
+                <a href="#" class="cta-button">了解更多</a>
             </div>
-            <!-- 添加更多项目卡片 -->
         </div>
+    </main>
+    <canvas id="particleCanvas"></canvas>
 
-        <h1>我的视频学习练习</h1>
-        <div class="container">
-            <div class="project-card">
-                <div class="project-title">平面2D割草游戏</div>
-                <div class="project-description" data-tooltip="代码大约900行，项目来自：BV1eM4m1S74K，享元模式下通过动画框架配合按键消息实现在2D平面各类动态效果">BV1eM4m1S74K</div>
-                <a href="https://github.com/76561198399297170/Learn_Game_1" class="project-link" data-tooltip="https://github.com/76561198399297170/Learn_Game_1">查看项目</a>
-            </div>
-            <div class="project-card">
-                <div class="project-title">双人平台对战游戏</div>
-                <div class="project-description" data-tooltip="项目来自：BV1jx4y1t7eP，项目使用场景管理器...等程序设计思想，实现平台对战游戏效果">学习进行中...</div>
-                <a href="https://github.com/76561198399297170/Learn_Game_2" class="project-link" data-tooltip="https://github.com/76561198399297170/Learn_Game_2">查看项目</a>
-            </div>
-            <!-- 添加更多项目卡片 -->
-        </div>
-
-        <canvas id="particleCanvas"></canvas>
-        <script>
-            const canvas = document.getElementById('particleCanvas');
-            const ctx = canvas.getContext('2d');
-            const container = document.querySelector('.container');
-
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            let particles = [];
-
-            function Particle(x, y, isStar)
-            {
-                this.x = x;
-                this.y = y;
-                this.size = isStar ? (Math.random() * 30 + 2) : (Math.random() * 5 + 1);
-                this.speedX = (Math.random() - 0.5) * (isStar ? 7 : 2);
-                this.speedY = (Math.random() - 0.5) * (isStar ? 7 : 2);
-                this.gravity = isStar ? 0.1 : 0;
-                this.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-                this.alpha = 1;
-                this.isStar = isStar;
-            }
-
-            Particle.prototype.update = function()
-            {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                this.speedY += this.gravity;
-                this.alpha -= 0.02;
-                if (this.alpha <= 0)
-                {
-                    const index = particles.indexOf(this);
-                    if (index !== -1) {
-                        particles.splice(index, 1);
-                    }
-                }
-            };
-
-            Particle.prototype.draw = function()
-            {
-                ctx.globalAlpha = this.alpha;
-                ctx.fillStyle = this.color;
-                ctx.beginPath();
-                if (this.isStar)
-                {
-                    const spikes = 5;
-                    const outerRadius = this.size;
-                    const innerRadius = this.size / 2;
-                    const angle = Math.PI / spikes;
-                    for (let i = 0; i < spikes * 2; i++)
-                        {
-                        const x = this.x + Math.cos(i * angle) * (i % 2 === 0 ? outerRadius : innerRadius);
-                        const y = this.y + Math.sin(i * angle) * (i % 2 === 0 ? outerRadius : innerRadius);
-                        if (i === 0)
-                        {
-                            ctx.moveTo(x, y);
-                        }
-                        else
-                        {
-                            ctx.lineTo(x, y);
-                        }
-                    }
-                    ctx.closePath();
-                }
-                else
-                {
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                }
-                ctx.fill();
-            };
-
-            document.addEventListener('click', (e) =>
-            {
-                for (let i = 0; i < 10; i++)
-                {
-                    particles.push(new Particle(e.clientX, e.clientY, true)); // isStar 为 true
-                }
+    <script src="script.js"></script>
+    <script>
+        fetch('navbar.html')
+           .then(response => response.text())
+           .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
             });
+    </script>
 
-            document.addEventListener('mousemove', (e) =>
-            {
-                const x = e.clientX;
-                const y = e.clientY;
-
-                for (let i = 0; i < 5; i++)
-                {
-                    particles.push(new Particle(x, y));
-                }
-            });
-            
-            function resizeCanvas()
-            {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-            window.addEventListener('resize', resizeCanvas);
-            resizeCanvas();
-            
-            function animate()
-            {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                for (let i = particles.length - 1; i >= 0; i--)
-                {
-                    const particle = particles[i];
-                    particle.update();
-                    if (particle.alpha > 0)
-                    {
-                        particle.draw();
-                    }
-                    else
-                    {
-                        particles.splice(i, 1);
-                    }
-                }
-                requestAnimationFrame(animate);
-            }
-            animate();
-        </script>
-    </body>
+</body>
 </html>
