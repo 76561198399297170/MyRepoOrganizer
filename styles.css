@@ -107,6 +107,18 @@ a.resource-link:hover
     text-align: center;
 }
 
+.cta-container
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-button
+{
+    display: inline-block;
+}
+
 .hero h2
 {
     font-size: clamp(2rem, 5vw, 3.5rem);
