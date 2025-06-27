@@ -1,76 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
-    <title>MFC打字窗口</title>
+    <title>MFC打字练习 - 项目集合</title>
 </head>
-
 <body>
     <div id="navbar-placeholder"></div>
     <main class="main-content">
-        <h1>项目示例</h1>
+        <h1>MFC打字练习项目</h1>
+        
+        <section class="project-resources">
+            <h2>相关资源</h2>
+            <p>你可以点击以下链接查看和下载相关资源：</p>
+            <a href="resources/Snow-white.txt" class="resource-link" target="_blank">练习文本文件（Snow-white.txt）</a>
+            <p>项目源码可在GitHub仓库查看：</p>
+            <a href="https://github.com/76561198399297170/TypingFrame" class="resource-link" target="_blank">GitHub项目地址</a>
+        </section>
 
         <section class="project-intro">
             <h2>项目简介</h2>
-            <p>这是一个示例项目，展示了各种样式的内容。该项目旨在提供一个全面的展示，包含文本、图片、列表、表格等元素。</p>
-
+            <p>这是一个基于MFC（Microsoft Foundation Classes）开发的打字练习程序，旨在帮助用户提高打字速度和准确性。项目实现了文本输入练习、实时错误检测、计时统计等功能，界面简洁直观，适合各阶段打字练习者使用。</p>
+            <p>项目采用C++语言开发，使用MFC框架构建窗口界面，通过文件读取加载练习文本，并实时计算打字速度和错误率，左上角计时器计时在完成后暂停，完成打字后输出结果，可在代码中更改布尔类型设置是否允许退格删除字符。</p>
         </section>
-
+        
         <section class="project-images">
-            <h2>图片展示</h2>
-            <p>以下是一些示例图片：</p>
-            <img src="images/test-picture.png" alt="示例图片" style="max-width: 100%; height: auto;">
+            <h2>项目解决方案文件结构：</h2>
+            <img src="images/img_1.png" alt="解决方案结构" style="max-width: 100%; height: auto;">
 
+            <h2>以下是项目运行时的界面截图：</h2>
+            <img src="images/img_2.png" alt="打字练习界面" style="max-width: 100%; height: auto;">
+            <p>打字练习初始界面</p>
+            
+            <img src="images/img_3.png" alt="打字过程中" style="max-width: 100%; height: auto;">
+            <p>打字练习进行中</p>
+            
+            <img src="images/img_4.png" alt="打字统计" style="max-width: 100%; height: auto;">
+            <p>打字结果统计</p>
+            
+            <img src="images/img_5.png" alt="退出提示" style="max-width: 100%; height: auto;">
+            <p>退出练习提示</p>
+            
+            <img src="images/img_6.png" alt="代码编辑界面" style="max-width: 100%; height: auto;">
+            <p>代码编辑与文本文件</p>
         </section>
-
+        
         <section class="project-lists">
-            <h2>列表展示</h2>
-            <p>无序列表：</p>
+            <h2>项目功能列表</h2>
+            <p>主要功能：</p>
             <ul>
-                <li>列表项 1</li>
-                <li>列表项 2</li>
-                <li>列表项 3</li>
+                <li>文本文件加载与显示（支持.txt格式）</li>
+                <li>实时打字计时功能</li>
+                <li>打字正确率统计与错误标记</li>
+                <li>打字速度（字数/分钟）计算</li>
+                <li>练习进度保存与恢复</li>
+                <li>多语言文本支持（当前示例为英文）</li>
             </ul>
-            <p>有序列表：</p>
+            <p>技术特点：</p>
             <ol>
-                <li>步骤 1</li>
-                <li>步骤 2</li>
-                <li>步骤 3</li>
+                <li>MFC框架下的窗口界面开发</li>
+                <li>文件IO操作实现文本加载</li>
+                <li>字符实时比对算法</li>
+                <li>多线程处理实现计时与输入同步</li>
+                <li>面向对象设计模式应用</li>
             </ol>
         </section>
-
+        
         <section class="project-table">
-            <h2>表格展示</h2>
+            <h2>项目技术架构</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>列 1</th>
-                        <th>列 2</th>
-                        <th>列 3</th>
+                        <th>模块</th>
+                        <th>功能描述</th>
+                        <th>关键文件</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>数据 1</td>
-                        <td>数据 2</td>
-                        <td>数据 3</td>
+                        <td>界面模块</td>
+                        <td>窗口创建、文本显示、交互控件</td>
+                        <td>TypingFrame.h/.cpp</td>
                     </tr>
                     <tr>
-                        <td>数据 4</td>
-                        <td>数据 5</td>
-                        <td>数据 6</td>
+                        <td>输入处理模块</td>
+                        <td>键盘输入捕获、字符比对</td>
+                        <td>textBox.h/.cpp</td>
+                    </tr>
+                    <tr>
+                        <td>计时统计模块</td>
+                        <td>时间计算、正确率统计</td>
+                        <td>myWord.h/.cpp</td>
+                    </tr>
+                    <tr>
+                        <td>文件操作模块</td>
+                        <td>文本文件读取</td>
+                        <td>utils.h/.cpp</td>
+                    </tr>
+                    <tr>
+                        <td>主控制模块</td>
+                        <td>程序初始化、模块协调</td>
+                        <td>main.h/.cpp</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
-
-        <section class="project-resources">
-            <h2>资源链接</h2>
-            <p>你可以点击以下链接下载相关资源：</p>
-            <a href="resources/test-document.pdf" class="resource-link" target="_blank">示例文档</a>
         </section>
     </main>
     <canvas id="particleCanvas"></canvas>
@@ -84,5 +118,4 @@
             });
     </script>
 </body>
-
 </html>
