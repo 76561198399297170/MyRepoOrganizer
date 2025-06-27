@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <title>MFC打字窗口</title>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <main class="main-content">
+        <h1>项目示例</h1>
+
+        <section class="project-intro">
+            <h2>项目简介</h2>
+            <p>这是一个示例项目，展示了各种样式的内容。该项目旨在提供一个全面的展示，包含文本、图片、列表、表格等元素。</p>
+
+        </section>
+
+        <section class="project-images">
+            <h2>图片展示</h2>
+            <p>以下是一些示例图片：</p>
+            <img src="images/test-picture.png" alt="示例图片" style="max-width: 100%; height: auto;">
+
+        </section>
+
+        <section class="project-lists">
+            <h2>列表展示</h2>
+            <p>无序列表：</p>
+            <ul>
+                <li>列表项 1</li>
+                <li>列表项 2</li>
+                <li>列表项 3</li>
+            </ul>
+            <p>有序列表：</p>
+            <ol>
+                <li>步骤 1</li>
+                <li>步骤 2</li>
+                <li>步骤 3</li>
+            </ol>
+        </section>
+
+        <section class="project-table">
+            <h2>表格展示</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>列 1</th>
+                        <th>列 2</th>
+                        <th>列 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>数据 1</td>
+                        <td>数据 2</td>
+                        <td>数据 3</td>
+                    </tr>
+                    <tr>
+                        <td>数据 4</td>
+                        <td>数据 5</td>
+                        <td>数据 6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="project-resources">
+            <h2>资源链接</h2>
+            <p>你可以点击以下链接下载相关资源：</p>
+            <a href="resources/test-document.pdf" class="resource-link" target="_blank">示例文档</a>
+        </section>
+    </main>
+    <canvas id="particleCanvas"></canvas>
+
+    <script src="../../script.js"></script>
+    <script>
+        fetch('../../navbar.html')
+           .then(response => response.text())
+           .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
