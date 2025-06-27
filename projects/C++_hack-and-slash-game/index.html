@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <title>Learn_Game_1 - C++游戏开发项目</title>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <main class="main-content">
+        <h1>Learn_Game_1 C++游戏开发项目</h1>
+        
+        <section class="project-resources">
+            <h2>相关资源</h2>
+            <p>项目源码可在GitHub仓库查看与下载：</p>
+            <a href="https://github.com/76561198399297170/Learn_Game_1" class="resource-link" target="_blank">GitHub项目地址</a>
+        </section>
+        
+        <section class="project-intro">
+            <h2>项目简介</h2>
+            <p>这是一个基于C++语言开发的2D射击游戏，采用SDL2图形库实现跨平台图形渲染。游戏包含完整的开始界面、游戏循环、碰撞检测和结束逻辑，展示了C++在游戏开发中的高效性能与面向对象设计优势。</p>
+            <p>玩家可以控制角色移动并发射子弹消灭敌人，随着得分增加可升级武器系统，提升游戏难度和趣味性。</p>
+        </section>
+        
+        <section class="project-images">
+            <h2>项目运行时界面截图：</h2>
+            <img src="images/img_1.png" alt="游戏开始界面" style="max-width: 100%; height: auto;">
+            <p>游戏开始界面 - 简洁开始和退出按钮</p>
+            
+            <img src="images/img_2.png" alt="游戏内主界面" style="max-width: 100%; height: auto;">
+            <p>游戏内主界面 - 展示角色移动和敌人生成系统</p>
+            
+            <img src="images/img_3.png" alt="失败结束窗口" style="max-width: 100%; height: auto;">
+            <p>失败结束界面 - 显示游戏结束提示和最终得分</p>
+            
+            <img src="images/img_4.png" alt="升级子弹个数" style="max-width: 100%; height: auto;">
+            <p>升级 - 子弹数量升级</p>
+        </section>
+        
+        <section class="project-structure">
+            <h2>项目文件结构</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>文件/文件夹名称</th>
+                        <th>描述</th>
+                        <th>最后提交信息</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Project_1</td>
+                        <td>主项目文件夹，包含游戏核心代码与资源</td>
+                        <td>通过上传添加文件</td>
+                    </tr>
+                    <tr>
+                        <td>README.md</td>
+                        <td>项目说明文档，包含开发环境与使用指南</td>
+                        <td>通过上传添加文件</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="project-languages">
+            <h2>技术栈与特点</h2>
+            <p>开发语言：</p>
+            <ul>
+                <li>C++ 100.0% —— 基于标准C++开发，确保跨平台兼容性与性能优化</li>
+            </ul>
+            <p>项目特点：</p>
+            <ol>
+                <li>面向对象设计：将游戏元素抽象为独立类，提高代码可维护性</li>
+                <li>基础模块架构：包含游戏循环、输入处理、渲染系统等核心组件</li>
+                <li>开发实践导向：适合学习C++游戏开发的基础流程与调试技巧</li>
+            </ol>
+        </section>
+    </main>
+    <canvas id="particleCanvas"></canvas>
+    <script src="../../script.js"></script>
+    <script>
+        fetch('../../navbar.html')
+           .then(response => response.text())
+           .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
