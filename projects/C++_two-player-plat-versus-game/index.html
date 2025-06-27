@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <title>Learn_Game_1 - C++游戏开发项目</title>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <main class="main-content">
+        <h1>制作中在未完成</h1>
+    </main>
+    <canvas id="particleCanvas"></canvas>
+    <script src="../../script.js"></script>
+    <script>
+        fetch('../../navbar.html')
+           .then(response => response.text())
+           .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
