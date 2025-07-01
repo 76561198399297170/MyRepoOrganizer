@@ -4,101 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
-    <title>MiniFarm - Unity农场模拟项目</title>
+    <title>Unity项目</title>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
     <main class="main-content">
-        <h1>MiniFarm Unity农场模拟项目</h1>
+        <h1>MiniFarm 2D模拟农场项目</h1>
         
         <section class="project-resources">
-            <h2>相关资源</h2>
-            <p>你可以点击以下链接查看和下载相关资源：</p>
-            <a href="https://github.com/76561198399297170/Learn_Unity_MiniFarm/raw/main/Mini%20Farm.rar" class="resource-link" target="_blank">游戏安装包（Mini Farm.rar）</a>
-            <p>项目源码可在GitHub仓库查看：</p>
-            <a href="https://github.com/76561198399297170/Learn_Unity_MiniFarm" class="resource-link" target="_blank">GitHub项目地址</a>
+            <h2>你可以点击以下链接查看与下载相关资源：</h2>
+            <p>项目编译生成可执行文件：<a href="https://github.com/76561198399297170/Learn_Unity_MiniFarm/tree/main" class="resource-link" target="_blank">游戏编译文件（github）</a></p>
+            <p>项目源码可在GitHub仓库查看：<a href="https://github.com/76561198399297170/Learn_Unity_MiniFarm/tree/master" class="resource-link" target="_blank">项目地址（github）</a></p>
         </section>
+        <br><br>
+        
         
         <section class="project-intro">
-            <h2>项目简介</h2>
-            <p>这是一个基于Unity引擎开发的农场模拟游戏，旨在为玩家提供轻松愉快的农场经营体验。玩家可以在游戏中购买种子、种植作物、管理农场，并通过收获作物获取收益，逐步扩展自己的农场规模。</p>
-            <p>项目采用C#语言开发，利用Unity的图形渲染和物理系统，实现了直观的农场场景和流畅的交互体验。游戏包含种子商店系统、作物生长系统、库存管理系统等核心功能，适合休闲玩家体验农场经营的乐趣。</p>
+            <h2>简介</h2>
+            <p>这是基于Unity引擎开发的农场模拟游戏，旨在提供一个简单轻松的像素农场经营游戏体验，为熟悉Unity项目完成购买种子、种植作物、收获经营等功能以逐步扩展农场规模。</p>
+            <p>项目采用C#语言开发，利用Unity图形渲染与物理系统，实现只管农场场景与交互。</p>
+            <p>由于内容较少作物生长时长设置较短，且使用随机数进行轻微浮动，完成游戏全流程只需5分钟左右。</p>
         </section>
+        <br><br>
+        
         
         <section class="project-images">
-            <h2>项目运行时的界面截图：</h2>
+            <h2>项目相关截图：</h2>
+            
             <img src="images/img_1.png" alt="种子商店" style="max-width: 100%; height: auto;">
-            <p>种子商店主界面 - 展示可购买的种子类型及价格（小白菜、芦笋、甘蓝、玉米）</p>
+            <p>初始页面包含可购买的种子类型及价格（小白菜、芦笋、甘蓝、玉米）</p>
             
             <img src="images/img_2.png" alt="购买操作" style="max-width: 100%; height: auto;">
-            <p>购买操作界面 - 选择种子后显示价格确认选项（Buy/Cancel）</p>
+            <p>购买选择种子后操作种植</p>
             
             <img src="images/img_3.png" alt="农场管理" style="max-width: 100%; height: auto;">
-            <p>农场管理界面 - 显示已种植作物的生长状态和地块分布</p>
+            <p>农场不同已种植作物的生长状态</p>
             
             <img src="images/img_4.png" alt="资源统计" style="max-width: 100%; height: auto;">
-            <p>资源统计界面 - 实时显示金币余额和作物生长进度</p>
+            <p>扩大种植规模发展</p>
         </section>
-        
-        <section class="project-lists">
-            <h2>项目功能列表</h2>
-            <p>主要功能：</p>
+        <br><br>
+
+
+        <section class="project-languages">
+            <h2>技术栈与特点</h2>
+            <p>开发语言与技术栈：</p>
             <ul>
-                <li>种子商店系统：浏览不同作物种子（小白菜/$2、芦笋/$10、甘蓝/$20、玉米/$50）并执行购买操作</li>
-                <li>作物种植管理：在农场地块中种植种子，观察作物随时间生长的动态过程</li>
-                <li>资源经济系统：实时记录金币收支，通过收获作物获取收益</li>
-                <li>交互操作界面：支持购买确认/取消、地块选择、作物收割等一键式操作</li>
-                <li>状态可视化：3D场景渲染作物生长阶段，直观展示农场经营状态</li>
+                <li>C# 100.0% —— 项目在Unity引擎中进行完成，借助C#面向对象封装特效编写script脚本导入Unity中整合调用。</li><br>
+
+                <li>游戏引擎：使用Unity游戏引擎进行项目开发，项目使用了其场景管理与2D碰撞检测功能。</li>
+                <li>UI系统：使用Unity的UI系统创建游戏界面，进行`Text`文本信息与`Image`组件显示图标图像。</li>
+                <li>音频系统：利用Unity音频系统实现游戏音效，通过`AudioClip`进行音效播放，实现种植、收获、购买的音效。</li>
+                <li>碰撞检测：使用`PolygonCollider2D`进行碰撞检测，主要使用于玩家点击检测。</li>
             </ul>
-            <p>技术特点：</p>
+            <p>项目特点：</p>
             <ol>
-                <li>Unity引擎3D场景开发，使用物理系统模拟作物生长逻辑</li>
-                <li>C#脚本实现状态机管理（商店状态/种植状态/收获状态）</li>
-                <li>UI系统设计：使用UGUI实现交互式商店界面和数据统计面板</li>
-                <li>资源加载机制：动态加载作物模型和场景纹理资源</li>
-                <li>面向对象设计：将作物、商店、玩家数据抽象为独立类库</li>
+                <li>通过模块化设计将不同模块封装在不同类中，提高代码可维护性和可扩展性</li>
+                <li>通过例如OnMouseDown、OnMouseOver等处理玩家交互操作，实现交互逻辑以了解其事件驱动逻辑</li>
+                <li>通过`ScriptableObject`将数据与逻辑分离，实现数据驱动设计便于修改与设计游戏内容</li>
+                <li>初学Unity项目，使用简单的逻辑与清晰的需求完成本Unity游戏项目，适合学习了解Unity基本功能与运行逻辑</li>
             </ol>
         </section>
-        
-        <section class="project-table">
-            <h2>项目技术架构</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>模块</th>
-                        <th>功能描述</th>
-                        <th>关键脚本文件</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>商店模块</td>
-                        <td>种子展示、价格计算、购买逻辑处理</td>
-                        <td>ShopSystem.cs、ItemData.cs</td>
-                    </tr>
-                    <tr>
-                        <td>种植模块</td>
-                        <td>地块管理、作物生长周期控制</td>
-                        <td>PlantSystem.cs、GrowthTimer.cs</td>
-                    </tr>
-                    <tr>
-                        <td>UI交互模块</td>
-                        <td>界面渲染、按钮事件响应</td>
-                        <td>UIManager.cs、ButtonHandler.cs</td>
-                    </tr>
-                    <tr>
-                        <td>资源管理模块</td>
-                        <td>金币统计、物品库存管理</td>
-                        <td>ResourceManager.cs、Inventory.cs</td>
-                    </tr>
-                    <tr>
-                        <td>场景控制模块</td>
-                        <td>农场场景加载、相机控制</td>
-                        <td>SceneController.cs、CameraManager.cs</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <br><br>
+
+
     </main>
     <canvas id="particleCanvas"></canvas>
     <script src="../../script.js"></script>

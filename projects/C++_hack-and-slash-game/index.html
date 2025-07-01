@@ -4,78 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
-    <title>割草类型游戏 - C++游戏开发</title>
+    <title>C++游戏开发</title>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
     <main class="main-content">
-        <h1>Learn_Game_1</h1>
+        <h1>割草类型游戏</h1>
         
         <section class="project-resources">
-            <h2>相关资源</h2>
-            <p>项目源码可在GitHub仓库查看与下载：</p>
-            <a href="https://github.com/76561198399297170/Learn_Game_1" class="resource-link" target="_blank">GitHub项目地址</a>
+            <h2>你可以点击以下链接查看与下载相关资源：</h2>
+            <p>学习过程Markdown笔记文件：<a href="resources/note.md" class="resource-link" target="_blank">笔记文件（note.md）</a></p>
+            <p>项目源码可在GitHub仓库查看与下载：<a href="https://github.com/76561198399297170/Learn_Game_1" class="resource-link" target="_blank">项目地址（github）</a></p>
         </section>
+        <br><br>
         
         <section class="project-intro">
-            <h2>项目简介</h2>
-            <p>这是一个基于C++语言开发的2D射击游戏，采用SDL2图形库实现跨平台图形渲染。游戏包含完整的开始界面、游戏循环、碰撞检测和结束逻辑，展示了C++在游戏开发中的高效性能与面向对象设计优势。</p>
-            <p>玩家可以控制角色移动并发射子弹消灭敌人，随着得分增加可升级武器系统，提升游戏难度和趣味性。</p>
+            <h2>简介</h2>
+            <p>这是跟随视频BV1eM4m1S74K基于C++语言使用简单EasyX图形库开发的2D平面像素割草游戏，总计代码行数772行。</p>
+            <p>游戏包含简单的资源加载、开始界面、局内循环、碰撞检测和结束逻辑，通过以上简单学习游戏运行流程与C++特性和优势。</p>
+            <p>玩家可以通过方向键控制角色上下左右以及斜角移动，玩家周围存在一圈围绕自身旋转子弹，敌人由场外生成并不断靠近玩家，子弹撞击敌人将其击杀或玩家主动按下E键冰冻自身均可增加得分，此处无图形资源而是通过自行编写代码完成了冰冻后高光冰面处的反光特效渲染，得分的增加将升级子弹个数，敌人首次撞击玩家将触发玩家闪烁与一定时长无敌帧，第二次撞击将触发游戏结束。</p>
         </section>
+        <br><br>
+        
         
         <section class="project-images">
-            <h2>项目运行时界面截图：</h2>
+            <h2>项目相关截图：</h2>
+
             <img src="images/img_1.png" alt="游戏开始界面" style="max-width: 100%; height: auto;">
-            <p>游戏开始界面 - 简洁开始和退出按钮</p>
+            <p>简陋的开始与退出界面按钮</p>
             
             <img src="images/img_2.png" alt="游戏内主界面" style="max-width: 100%; height: auto;">
-            <p>游戏内主界面 - 展示角色移动和敌人生成系统</p>
+            <p>游戏局内角色和敌人</p>
             
             <img src="images/img_3.png" alt="失败结束窗口" style="max-width: 100%; height: auto;">
-            <p>失败结束界面 - 显示游戏结束提示和最终得分</p>
+            <p>失败结束显示游戏结束提示</p>
             
             <img src="images/img_4.png" alt="升级子弹个数" style="max-width: 100%; height: auto;">
-            <p>升级 - 子弹数量升级</p>
+            <p>得分升级子弹个数提升</p>
+            
+            <img src="images/img_5.png" alt="升级子弹个数" style="max-width: 100%; height: auto;">
+            <p>扩展E键冰冻自身以获得更多得分</p>
         </section>
-        
-        <section class="project-structure">
-            <h2>项目文件结构</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>文件/文件夹名称</th>
-                        <th>描述</th>
-                        <th>最后提交信息</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Project_1</td>
-                        <td>主项目文件夹，包含游戏核心代码与资源</td>
-                        <td>通过上传添加文件</td>
-                    </tr>
-                    <tr>
-                        <td>README.md</td>
-                        <td>项目说明文档，包含开发环境与使用指南</td>
-                        <td>通过上传添加文件</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        
+        <br><br>
+
+
         <section class="project-languages">
             <h2>技术栈与特点</h2>
-            <p>开发语言：</p>
+            <p>开发语言与技术栈：</p>
             <ul>
-                <li>C++ 100.0% —— 基于标准C++开发，确保跨平台兼容性与性能优化</li>
+                <li>C++ 100.0% —— 整个项目的代码均使用C++编写，利用了C++丰富的特性，如面向对象编程的类、继承和多态，以及标准库中的容器和算法，提升了代码的可维护性和复用性。</li><br>
+
+                <li>图形库：使用EasyX图形库实现游戏界面的绘制和图像显示。如`loadimage`函数用于加载图片，`putimage`函数用于将图片绘制到指定位置，`AlphaBlend`函数实现透明图像的绘制。</li>
+                <li>多媒体库：Windows Multimedia API（Winmm.lib），通过 `#pragma comment(lib, "Winmm.lib")` 引入库，使用 `mciSendString` 函数实现游戏中的音频播放功能，包括背景音乐和打击音效等。</li>
+                <li>标准库：C++ STL使用`std::vector`容器来存储游戏对象，如敌人和子弹，方便进行动态管理和操作。</li>
+                <li>内存管理：动态内存分配（`new`，`delete`关键字）在项目中动态分配内存，如在`Atlas`类中为`IMAGE`对象分配内存，同时在析构函数中使用`delete`释放内存，确保资源的合理使用，避免内存泄漏。</li>
+                <li>事件处理：Windows消息机制，通过`peekmessage`函数获取Windows消息，根据不同的消息类型（如鼠标事件`WM_MOUSEMOVE`、`WM_LBUTTONDOWN`、`WM_LBUTTONUP`和键盘事件`WM_KEYDOWN`、`WM_KEYUP`）处理用户输入，实现交互逻辑。</li>
             </ul>
             <p>项目特点：</p>
             <ol>
-                <li>面向对象设计：将游戏元素抽象为独立类，提高代码可维护性</li>
-                <li>基础模块架构：包含游戏循环、输入处理、渲染系统等核心组件</li>
-                <li>开发实践导向：适合学习C++游戏开发的基础流程与调试技巧</li>
+                <li>初学阶段且为小型项目所以将所有代码放在main中，后面的项目将分文件编写</li>
+                <li>使用面向对象设计，简单将游戏元素抽象为独立类以提高代码可维护性</li>
+                <li>使用包含游戏循环、输入处理、渲染系统等核心组件，使用动态演示稳定帧率</li>
+                <li>适合学习C++游戏开发的基础流程与调试技巧的项目</li>
             </ol>
         </section>
+        <br><br>
+
+        
     </main>
     <canvas id="particleCanvas"></canvas>
     <script src="../../script.js"></script>

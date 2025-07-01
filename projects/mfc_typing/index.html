@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
-    <title>MFC打字练习 - 项目集合</title>
+    <title>MFC桌面项目</title>
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -12,100 +12,68 @@
         <h1>MFC打字练习项目</h1>
         
         <section class="project-resources">
-            <h2>相关资源</h2>
-            <p>你可以点击以下链接查看和下载相关资源：</p>
-            <a href="resources/Snow-white.txt" class="resource-link" target="_blank">练习文本文件（Snow-white.txt）</a>
-            <p>项目源码可在GitHub仓库查看：</p>
-            <a href="https://github.com/76561198399297170/TypingFrame" class="resource-link" target="_blank">GitHub项目地址</a>
+            <h2>你可以点击以下链接查看与下载相关资源：</h2>
+            <p>练习文本txt原文文件：<a href="resources/Snow-white.txt" class="resource-link" target="_blank">练习文本（Snow-white.txt）</a></p>
+            <p>项目源码可在GitHub仓库查看：<a href="https://github.com/76561198399297170/TypingFrame" class="resource-link" target="_blank">项目地址（github）</a></p>
         </section>
-
+        <br><br>
+        
+        
         <section class="project-intro">
-            <h2>项目简介</h2>
-            <p>这是一个基于MFC（Microsoft Foundation Classes）开发的打字练习程序，旨在帮助用户提高打字速度和准确性。项目实现了文本输入练习、实时错误检测、计时统计等功能，界面简洁直观，适合各阶段打字练习者使用。</p>
-            <p>项目采用C++语言开发，使用MFC框架构建窗口界面，通过文件读取加载练习文本，并实时计算打字速度和错误率，左上角计时器计时在完成后暂停，完成打字后输出结果，可在代码中更改布尔类型设置是否允许退格删除字符。</p>
+            <h2>简介</h2>
+            <p>这是基于MFC开发的打字练习程序，旨在帮助用户提高打字速度和准确性，为学习熟悉MFC运行原理与运作过程，未使用Visual Studio提供的工具箱内组件。</p>
+            <p>项目使用MFC框架构建窗口界面，手动注册各类事件并编写组件包括从渲染到运行过程中逻辑部分，解决了初学不熟悉以及渲染过程中的闪烁等等的问题以快速入手MFC项目。</p>
+            <p>编辑根目录下文本或初始化中读取文本路径或文件名即可修改打字文件，由于编码问题目前中文读取会有问题只需修改编码方式即可正常读取中文，初始化加载文件后自动计算文本宽度进行分割行换行避免错位，创建每一行文本打字框并计算右侧滚动窗口侧边栏长度即可实现鼠标滚轮上下翻页效果，左上角计时器在按下按键后开始并在完成最后一个字符输入后暂停，完成打字后输出练习结果，默认运行退格删除字符可在代码中更改布尔变量设置是否允许退格删除字符，按下ESC可选择立即退出窗口。</p>
         </section>
+        <br><br>
+
         
         <section class="project-images">
-            <h2>项目解决方案文件结构：</h2>
-            <img src="images/img_1.png" alt="解决方案结构" style="max-width: 100%; height: auto;">
+            <h2>项目相关截图：</h2>
 
-            <h2>以下是项目运行时的界面截图：</h2>
+            <img src="images/img_1.png" alt="解决方案结构" style="max-width: 100%; height: auto;">
+            <p>项目解决方案与结构</p><br>
+
             <img src="images/img_2.png" alt="打字练习界面" style="max-width: 100%; height: auto;">
-            <p>打字练习初始界面</p>
+            <p>打字练习界面（全屏）</p><br>
             
-            <img src="images/img_3.png" alt="打字过程中" style="max-width: 100%; height: auto;">
-            <p>打字练习进行中</p>
+            <img src="images/img_3.png" alt="打字进行过程" style="max-width: 100%; height: auto;">
+            <p>按下键盘字符进行打字中</p><br>
             
-            <img src="images/img_4.png" alt="打字统计" style="max-width: 100%; height: auto;">
-            <p>打字结果统计</p>
+            <img src="images/img_4.png" alt="打字结束统计" style="max-width: 100%; height: auto;">
+            <p>回车快速到达末尾触发练习结果</p><br>
             
-            <img src="images/img_5.png" alt="退出提示" style="max-width: 100%; height: auto;">
-            <p>退出练习提示</p>
+            <img src="images/img_5.png" alt="退出弹出提示" style="max-width: 100%; height: auto;">
+            <p>退出练习提示</p><br>
             
-            <img src="images/img_6.png" alt="代码编辑界面" style="max-width: 100%; height: auto;">
-            <p>代码编辑与文本文件</p>
+            <img src="images/img_6.png" alt="练习文本文件" style="max-width: 100%; height: auto;">
+            <p>练习文本文件</p><br>
         </section>
+        <br><br>
+
         
-        <section class="project-lists">
-            <h2>项目功能列表</h2>
-            <p>主要功能：</p>
+        <section class="project-languages">
+            <h2>技术栈与特点</h2>
+            <p>开发语言与技术栈：</p>
             <ul>
-                <li>文本文件加载与显示（支持.txt格式）</li>
-                <li>实时打字计时功能</li>
-                <li>打字正确率统计与错误标记</li>
-                <li>打字速度（字数/分钟）计算</li>
-                <li>练习进度保存与恢复</li>
-                <li>多语言文本支持（当前示例为英文）</li>
+                <li>C++ 100.0% —— 整个项目的代码均使用C++编写，利用了C++丰富的特性，如面向对象编程的类、继承和多态，以及标准库中的容器和算法，提升了代码的可维护性和复用性。</li><br>
+
+                <li>MFC：使用MFC框架开发Windows桌面应用程序，为熟悉MFC项目与运行原理所有组件绘制与构建，均使用手写代码的方法，对不同组件进行翻转以提升代码可维护性与复用性。</li>
+                <li>标准库：C++ STL使用`std::ifstream`进行文件读取功能，读取指定路径文件作为打字文本内容。</li>
+                <li>图形绘制：通过滚轮位置计算窗口绘制区域的内容，利用设备上下文DC进行图形与文本绘制，通过`CPaintDC`与`CDC`进行窗口内绘制。</li>
+                <li>计时器：利用Windows计时器机制，通过SetTimer与KillerTimer来启动与关闭计时器，实现打字时间计时功能。</li>
             </ul>
-            <p>技术特点：</p>
+            <p>项目特点：</p>
             <ol>
-                <li>MFC框架下的窗口界面开发</li>
-                <li>文件IO操作实现文本加载</li>
-                <li>字符实时比对算法</li>
-                <li>多线程处理实现计时与输入同步</li>
-                <li>面向对象设计模式应用</li>
+                <li>这是初次学习MFC项目，该项目体现初学探索和实践的过程</li>
+                <li>项目部分数据结构个人认为不够完美，但项目整体上进行了一定的模块划分，将不同功能封装到不同类与文件中，例如`TypingFrame`负责窗口管理，`TextBox`负责文本框管理，`MyWord`负责单字符管理，提高了代码组织性</li>
+                <li>实现了多种交互，包括按键键盘监控，输入字符，退格删除输入，Esc退出项目，鼠标滑轮翻动窗口页面等等</li>
+                <li>项目覆盖MFC开发基本流程，包括窗口创建、信息处理、图形绘制等，适合初学MFC开发Windows桌面应用初学者</li>
             </ol>
         </section>
+        <br><br>
+
         
-        <section class="project-table">
-            <h2>项目技术架构</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>模块</th>
-                        <th>功能描述</th>
-                        <th>关键文件</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>界面模块</td>
-                        <td>窗口创建、文本显示、交互控件</td>
-                        <td>TypingFrame.h/.cpp</td>
-                    </tr>
-                    <tr>
-                        <td>输入处理模块</td>
-                        <td>键盘输入捕获、字符比对</td>
-                        <td>textBox.h/.cpp</td>
-                    </tr>
-                    <tr>
-                        <td>计时统计模块</td>
-                        <td>时间计算、正确率统计</td>
-                        <td>myWord.h/.cpp</td>
-                    </tr>
-                    <tr>
-                        <td>文件操作模块</td>
-                        <td>文本文件读取</td>
-                        <td>utils.h/.cpp</td>
-                    </tr>
-                    <tr>
-                        <td>主控制模块</td>
-                        <td>程序初始化、模块协调</td>
-                        <td>main.h/.cpp</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
     </main>
     <canvas id="particleCanvas"></canvas>
 
